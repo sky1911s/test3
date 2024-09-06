@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}
+    Storage
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Symbols</th>
+                <th scope="col">Shares you own</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rows in rows %}
+                <tr>
+                    <td>{{ rows[0] }}</td>
+                    <td>{{ rows[1] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

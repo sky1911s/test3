@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Top up
+{% endblock %}
+
+{% block main %}
+    <form action="/top" method="POST">
+        <input type="number" autofocus name="amount" autocomplete="off" required placeholder="Top up amount">
+        <button class="btn btn-primary" type="submit">submit</button>
+    </form>
+{% endblock %}

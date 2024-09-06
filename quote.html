@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="POST">
+        <input type="text" name="sym" autocomplete="off" autofocus placeholder="insert stock symbol" required>
+        <br>
+        <input type="number" min="0" step="1" name="name" autocomplete="off" autofocus placeholder="input number off stock" required>
+        <button class="btn btn-primary" type="submit">submit</button>
+    </form>
+{% endblock %}
